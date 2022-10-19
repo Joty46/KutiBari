@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Kuti Bari</string>
+    <string name="selectfororders"><b>Orders</b></string>
+    <string name="selectforworks"><b>Uploaded Works</b></string>
+</resources>

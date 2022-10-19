@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/images4"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/uploadworktxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload Works"
+        android:textColor="#E8FFFFFF"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        />
+    <TextView
+        android:id="@+id/imgtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/uploadworktxt"
+        android:text="Image of your work :"
+        android:textColor="#E8FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:layout_margin="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageforworks"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/imgtxt"
+        android:layout_marginLeft="120dp"
+        tools:srcCompat="@tools:sample/avatars"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgtxt"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="98dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.701"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/priceinworks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageforworks"
+        android:text="Price :"
+        android:textColor="#E8FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:layout_margin="5dp"
+        />
+
+    <EditText
+        android:id="@+id/editprice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/priceinworks"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawablePadding="20dp"
+        android:hint="150 BDT"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+    <TextView
+        android:id="@+id/dayinworks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editprice"
+        android:text="Days needed to complete:"
+        android:textColor="#E8FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:layout_margin="5dp"
+        />
+
+    <EditText
+        android:id="@+id/editdays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dayinworks"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawablePadding="20dp"
+        android:hint="15 days"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/submitworks"
+        android:text="SUBMIT"
+        android:textSize="25dp"
+        android:layout_below="@id/editdays"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/teal_200"
+        android:layout_margin="20dp"
+        />
+
+
+
+
+</RelativeLayout>

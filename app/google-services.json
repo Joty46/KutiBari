@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "604567826648",
+    "project_id": "kutibari-9a550",
+    "storage_bucket": "kutibari-9a550.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604567826648:android:b8e27fabb766f568bda7ad",
+        "android_client_info": {
+          "package_name": "com.example.kutibari"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "604567826648-qtm0gpu1a8g2ah13of2fm01j88vds790.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1ZRraRZZVVslEWmfL9UiOsFCLIEI_sYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "604567826648-qtm0gpu1a8g2ah13of2fm01j88vds790.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/undraw_profile_pic_re_78k0" />
+    <TextView
+        android:id="@+id/yourprofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image"
+        android:layout_marginTop="-10dp"
+        android:text="Your profile"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/artisandialog"
+        android:layout_below="@id/yourprofile"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Our Artisans"
+        android:textSize="25dp"
+        android:textColor="#454242"/>
+
+
+<!--    woman scroll-->
+    <HorizontalScrollView
+        android:id="@+id/scrollaritsan"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_below="@+id/artisandialog"
+        android:layout_marginTop="-5dp">
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/categorygrid"
+                android:layout_width="1050dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <GridView
+                    android:id="@+id/gridView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="4dp"
+                    android:columnWidth="150dp"
+                    android:gravity="center"
+                    android:numColumns="500"
+                    android:horizontalSpacing="1dp"
+                    android:scrollbarAlwaysDrawHorizontalTrack="true"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:scrollbars="horizontal"
+                    android:stretchMode="none"
+                    android:verticalSpacing="1dp"/>
+            </LinearLayout>
+        </FrameLayout>
+    </HorizontalScrollView>
+
+
+
+    <TextView
+        android:id="@+id/artisanlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scrollaritsan"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:text="View full list"
+        android:textColor="#494747" />
+
+    <TextView
+        android:id="@+id/categorydialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/artisanlist"
+        android:layout_marginLeft="10dp"
+        android:text="Category"
+        android:textColor="#454242"
+        android:textSize="25dp" />
+
+    <HorizontalScrollView
+        android:id="@+id/scrollproducts"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_below="@+id/categorydialog"
+        android:layout_marginTop="-5dp">
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/lineargrid"
+                android:layout_width="1050dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <GridView
+                    android:id="@+id/gridcat"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="4dp"
+                    android:columnWidth="150dp"
+                    android:gravity="center"
+                    android:numColumns="500"
+                    android:horizontalSpacing="1dp"
+                    android:scrollbarAlwaysDrawHorizontalTrack="true"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:scrollbars="horizontal"
+                    android:stretchMode="none"
+                    android:verticalSpacing="1dp"/>
+            </LinearLayout>
+        </FrameLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/categorylist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scrollproducts"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:text="View full list"
+        android:textColor="#494747" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/categorylist"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/purple_500"
+        android:layout_centerHorizontal="true"
+        android:text="LOGIN" />
+
+    <TextView
+        android:id="@+id/account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginbtn"
+        android:layout_marginTop="2dp"
+        android:layout_centerHorizontal="true"
+        android:text="Don't have an account?"
+        android:textColor="#494747" />
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/account"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:text="Sign Up"
+        android:textColor="#333333"
+        android:textStyle="bold" />
+</RelativeLayout>

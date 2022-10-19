@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/images2"
+    tools:context=".OrderDetails">
+
+
+    <TextView
+        android:id="@+id/orderstxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order Details"
+        android:textColor="#E8FFFFFF"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_margin="40dp"
+        android:gravity="center"
+        />
+    <TextView
+        android:id="@+id/orderwho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orderstxt"
+        android:text="Who Ordered:"
+        android:textColor="#E8FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:layout_margin="5dp"
+        />
+
+    <TextView
+        android:id="@+id/orderusername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orderwho"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawablePadding="20dp"
+        android:hint="Username"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+    <TextView
+        android:id="@+id/orderwhere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orderusername"
+        android:text="Where to supply:"
+        android:textColor="#E8FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:layout_margin="5dp"
+        />
+
+    <TextView
+        android:id="@+id/orderlocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orderwhere"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawablePadding="20dp"
+        android:hint="Address"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+    <TextView
+        android:id="@+id/orderwhatqty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orderlocation"
+        android:text="Quantity:"
+        android:textColor="#E8FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:layout_margin="5dp"
+        />
+
+    <TextView
+        android:id="@+id/orderquantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orderwhatqty"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawablePadding="20dp"
+        android:hint="Number"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <TextView
+        android:id="@+id/orderrecommendation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orderquantity"
+        android:text="If any speaial recommendation:"
+        android:textColor="#E8FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:layout_margin="5dp"
+        />
+
+    <TextView
+        android:id="@+id/orderspecialrec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orderrecommendation"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawablePadding="20dp"
+        android:hint="None"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+
+</RelativeLayout>
