@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, RegistrationNew.class));
+                startActivity(new Intent(MainActivity.this, RegisterScan.class));
 //                finish();
             }
         });

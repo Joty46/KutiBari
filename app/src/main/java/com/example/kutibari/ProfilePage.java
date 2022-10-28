@@ -30,8 +30,8 @@ public class ProfilePage extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                  String itemsfororder=parent.getItemAtPosition(position).toString();
-//                Intent intent=new Intent(ProfilePage.this,OrderDetails.class);//order details
-//                startActivity(intent);
+                Intent intent=new Intent(ProfilePage.this,OrderDetails.class);//order details
+                startActivity(intent);
             }
         });
         autoCompleteTxtForWorks=findViewById(R.id.auto_complete_text_uploadedworks);
@@ -41,8 +41,8 @@ public class ProfilePage extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                  String itemsforworks=parent.getItemAtPosition(position).toString();
-//                Intent intent=new Intent(ProfilePage.this,Works.class);//works.java
-//                startActivity(intent);
+                Intent intent=new Intent(ProfilePage.this,Works.class);//works.java
+                startActivity(intent);
             }
         });
         uploadbtn=findViewById(R.id.upload);

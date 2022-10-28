@@ -40,4 +40,11 @@ dependencies {
 //    implementation 'com.github.smarteist:autoimageslider:1.4.0'
     implementation platform('com.google.firebase:firebase-bom:30.4.1')
     implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-core:15.0.2'
+    //noinspection OutdatedLibrary
+    implementation 'com.google.firebase:firebase-ml-vision:15.0.0'
+
+    //image scanning
+//    implementation 'com.google.android.gms:play-services-vision:19.0.0'
+//    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
 }

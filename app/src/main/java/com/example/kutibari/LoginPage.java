@@ -17,6 +17,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 public class LoginPage extends AppCompatActivity {
 
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://kutibari-9a550-default-rtdb.firebaseio.com/");
@@ -33,6 +37,7 @@ public class LoginPage extends AppCompatActivity {
         final EditText password = findViewById(R.id.password);
         final MaterialButton loginbtn = findViewById(R.id.loginbtn);
         final TextView regnow = findViewById(R.id.regnow);
+//        password.setText(getMdHash(password.getText().toString()));
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,12 +46,12 @@ public class LoginPage extends AppCompatActivity {
                  * code
                  */
                 final String phone = mobile.getText().toString();
-                final String pass = password.getText().toString();
+                final String[] pass = {password.getText().toString()};
 
                 if(phone.isEmpty()){
                     Toast.makeText(LoginPage.this,"Please Enter your username",Toast.LENGTH_SHORT).show();
                 }
-                else if(pass.isEmpty() ){
+                else if(pass[0].isEmpty() ){
                     Toast.makeText(LoginPage.this,"Please Enter your password",Toast.LENGTH_SHORT).show();
                 }
                 else{
@@ -57,13 +62,28 @@ public class LoginPage extends AppCompatActivity {
                             if(snapshot.hasChild(phone)){
                                 //mobile exits in firebase now take password from user
                                 final String getpass = snapshot.child(phone).child("password").getValue(String.class);
-                                if(getpass.equals(pass)){
+
+
+                                //hash the entered password
+                                byte[] inputData = password.getText().toString().getBytes();
+                                byte[] outputData = new byte[0];
+
+                                try {
+                                    outputData = sha.encryptSHA(inputData, "SHA-1");
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                                BigInteger shaData = new BigInteger(1,outputData);
+//                                Object tuna = tvOutput.setText(shaData.toString(10));
+                                pass[0] = shaData.toString(10);
+                                if(getpass.equals(pass[0])){
                                     Toast.makeText(LoginPage.this, "Successfully logged in", Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(LoginPage.this, MainActivity.class));
                                     finish();
                                 }
                                 else{
                                     Toast.makeText(LoginPage.this, "Sorry you provided wrong password", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginPage.this, pass[0], Toast.LENGTH_SHORT).show();
                                 }
                             }
                             else {
@@ -102,21 +122,30 @@ public class LoginPage extends AppCompatActivity {
 
         });
     }
+    /*
+    private String getMdHash(String toString){
+        String MD5 = "MD5";
+//        this creates md5 hash
+        try {
+            MessageDigest digest = MessageDigest.getInstance(MD5);
+            digest.update(toString.getBytes());
+            byte messageDigest[] = digest.digest();
 
-    /**
-     * go to forget password page
-     */
-//    public void openforgotpass(){
-//
-//        Intent intent = new Intent(this, ForgetPassword.class);
-//        startActivity(intent);
-//    }
+//            to create hex string
+            StringBuilder hexString = new StringBuilder();
 
-    /**
-     * go to home page
-     */
-//    public void gotohomepage(){
-//        Intent intent = new Intent(this, MainActivity.class);
-//        startActivity(intent);
-//    }
+            for (byte aMsgDigest: messageDigest){
+                String h = Integer.toHexString(0xFF & aMsgDigest);
+                while (h.length()<2){
+                    h = "0" + h;
+                }
+                hexString.append(h);
+            }
+            return hexString.toString();
+
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }*/
 }
