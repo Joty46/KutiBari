@@ -1,4 +1,5 @@
-We have observed that some the business organizations for example “Aarong” they collects their products from the rural women and sell their products at a high price but the rural women are paid a small portion of the dividend . So we have tried to  design a system that will provide a platform for the rural women to sell their products in their expected price .
+We have observed that some the business organizations for example “Aarong” they collects their products from the rural women and sell their products at a high price but the rural women are paid a small portion of the dividend . So we have tried to  design a system that will provide a platform for the rural women to sell their products in their expected price .Moreover, we notice that the rural women have different types of skills . But in most cases there is lack of opportunities , so they remains unemployed . This system will provide them the opportunity to become self-reliance . 
+
 As the business organizations sell their product at a high price so middle class people can’t afford them . But by using the system they will be able to buy the tasteful products in reasonable price .
 
 
